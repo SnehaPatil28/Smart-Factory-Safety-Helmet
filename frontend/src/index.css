@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0f19;
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glowing Pulse Animations */
+@keyframes pulse-teal {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(20, 184, 166, 0.4), 0 0 10px rgba(20, 184, 166, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.8), 0 0 25px rgba(20, 184, 166, 0.4);
+  }
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5), 0 0 12px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.9), 0 0 30px rgba(239, 68, 68, 0.5);
+  }
+}
+
+.glow-teal {
+  animation: pulse-teal 2s infinite ease-in-out;
+}
+
+.glow-red {
+  animation: pulse-red 1.2s infinite ease-in-out;
+}
